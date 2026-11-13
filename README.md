@@ -1,8 +1,20 @@
-# A080839(14): a new term of the OEIS sequence of Gilbreath sequences
+# Gilbreath sequences: new OEIS terms
 
-This repository computes the OEIS sequence [A080839](https://oeis.org/A080839): the number of positive, strictly increasing integer sequences of length *n* whose **Gilbreath transform is (1, 1, 1, ...)**. That means the first entry of every row of the sequence's absolute-difference triangle is 1.
+This repository computes new terms of OEIS sequences that count integer sequences whose **Gilbreath transform is (1, 1, 1, ...)**. That means the first entry of every row of the sequence's absolute-difference triangle is 1. All the sequences are counted with the same method, column-wise dynamic programming over the difference triangle, and every new term was checked with independent programs.
 
-The OEIS listed the terms up to a(13), the last of them computed in 2007, and asked for more. This repository computes the next term:
+## New terms
+
+| Sequence | What it counts | New terms | Folder |
+|---|---|---|---|
+| [A080839](https://oeis.org/A080839) | positive increasing sequences | a(14) = 5256046698145 | root |
+| [A363002](https://oeis.org/A363002) | positive nondecreasing sequences | a(13) = 187385419983 | [`siblings/`](siblings/) |
+| [A363003](https://oeis.org/A363003) | integer sequences (negatives allowed) | a(11) = 35893184070<br>a(12) = 3319196894026<br>a(13) = 447304468741942 | [`siblings/`](siblings/) |
+
+The rest of this page describes A080839. [`siblings/README.md`](siblings/README.md) explains how the same program handles A363002 and A363003 by changing only the rule for the first row.
+
+# A080839(14)
+
+[A080839](https://oeis.org/A080839) counts the positive, strictly increasing integer sequences of length *n* whose Gilbreath transform is (1, 1, 1, ...). The OEIS listed the terms up to a(13), the last of them computed in 2007, and asked for more. This repository computes the next term:
 
 ```
 a(14) = 5256046698145
@@ -93,6 +105,7 @@ See [NOTES_growth.md](NOTES_growth.md) for results on the growth of a(n): a prov
 | `a080839_reference.py` | short Python version of the same method |
 | `brute_force.py` | brute-force count from the definition, for verification |
 | `NOTES_growth.md` and its scripts | growth results (see above) |
+| `siblings/` | A363002 and A363003: programs, verifiers and new terms |
 
 ## Credits and citation
 
@@ -100,7 +113,7 @@ Author: **Roberto Vetere**, 2026. The code was developed with the assistance of 
 
 If you use this code or the value of a(14), please cite:
 
-> Roberto Vetere, *A080839(14): a new term of the OEIS sequence of Gilbreath sequences*, GitHub, 2026. https://github.com/RobertoVetere/oeis-a080839
+> Roberto Vetere, *Gilbreath sequences: new OEIS terms*, GitHub, 2026. https://github.com/RobertoVetere/gilbreath-sequences
 
 ## License
 
@@ -108,5 +121,5 @@ If you use this code or the value of a(14), please cite:
 
 ## References
 
-- OEIS, [A080839](https://oeis.org/A080839).
+- OEIS, [A080839](https://oeis.org/A080839), [A363002](https://oeis.org/A363002), [A363003](https://oeis.org/A363003).
 - L. Muney, *Holes in Valid-Extension Sets of Finite Gilbreath Sequences*, arXiv:2606.23721, 2026.
