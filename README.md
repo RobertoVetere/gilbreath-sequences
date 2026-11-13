@@ -9,6 +9,7 @@ This repository computes new terms of OEIS sequences that count integer sequence
 | [A080839](https://oeis.org/A080839) | positive increasing sequences | a(14) = 5256046698145 | root |
 | [A363002](https://oeis.org/A363002) | positive nondecreasing sequences | a(13) = 187385419983 | [`siblings/`](siblings/) |
 | [A363003](https://oeis.org/A363003) | integer sequences (negatives allowed) | a(11) = 35893184070<br>a(12) = 3319196894026<br>a(13) = 447304468741942 | [`siblings/`](siblings/) |
+| [A399946](https://oeis.org/A399946) | max Gilbreath terminal value over graceful paths | a(19)–a(27) = 7, 9, 9, 9, 9, 12, 10, 14, 16 | [`graceful/`](graceful/) |
 
 The rest of this page describes A080839. [`siblings/README.md`](siblings/README.md) explains how the same program handles A363002 and A363003 by changing only the rule for the first row.
 
@@ -106,6 +107,7 @@ See [NOTES_growth.md](NOTES_growth.md) for results on the growth of a(n): a prov
 | `brute_force.py` | brute-force count from the definition, for verification |
 | `NOTES_growth.md` and its scripts | growth results (see above) |
 | `siblings/` | A363002 and A363003: programs, verifiers and new terms |
+| `graceful/` | A399946: graceful-path enumeration and new terms |
 
 ## Credits and citation
 
@@ -121,5 +123,5 @@ If you use this code or the value of a(14), please cite:
 
 ## References
 
-- OEIS, [A080839](https://oeis.org/A080839), [A363002](https://oeis.org/A363002), [A363003](https://oeis.org/A363003).
+- OEIS, [A080839](https://oeis.org/A080839), [A363002](https://oeis.org/A363002), [A363003](https://oeis.org/A363003), [A399946](https://oeis.org/A399946), [A006967](https://oeis.org/A006967).
 - L. Muney, *Holes in Valid-Extension Sets of Finite Gilbreath Sequences*, arXiv:2606.23721, 2026.
